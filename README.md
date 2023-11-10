@@ -1,6 +1,9 @@
 
 ![flesh-and-blood-logo](https://github.com/sainttttt/flesh-and-blood/assets/58609876/899ac606-a531-406f-9825-1c3257c8d1b6)
-
+#### Install the theme with your preferred package manager, such as folke/lazy.nvim:
+```
+{"sainttttt/flesh-and-blood”}
+```
 vim colorscheme
 
 ![Screenshot 2023-11-09 at 12 26 01 PM](https://github.com/sainttttt/flesh-and-blood/assets/58609876/3fe0a0bd-0185-4872-9a54-3d2768f3d5f0)
