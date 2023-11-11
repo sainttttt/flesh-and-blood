@@ -349,7 +349,7 @@ exe "hi! Delimiter"         .s:fg_darkred       .s:bg_none        .s:fmt_none
 "
 exe "hi! Underlined"      .s:fg_blue        .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
-exe "hi! Error"           .s:fg_red         .s:bg_darkred     .s:fmt_undr
+exe "hi! Error"           .s:fg_yellow         .s:bg_magenta     .s:fmt_undr
 exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fmt_none
 
 " Quickfix window highlighting
