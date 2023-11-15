@@ -309,6 +309,11 @@ endif
 " ----------------------------------------------------------------------------
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 
+exe "hi! TabLine"         .s:fg_comment     .s:bg_background        .s:fmt_none
+exe "hi! TabLineFill"     .s:fg_background  .s:bg_background        .s:fmt_none
+exe "hi! TabLineSel"      .s:fg_magenta     .s:bg_background        .s:fmt_none
+
+
 exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_darkred       .s:bg_none        .s:fmt_none
 exe "hi! Number"          .s:fg_purple       .s:bg_none        .s:fmt_none
