@@ -73,7 +73,7 @@ let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon
 " let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon  
 let s:orange     = HexOrTermColor("#dd9767", 3)    " Yellow | DarkYellow
 let s:blue       = HexOrTermColor("#7a88a0", 4)   " Bright Blue | LightBlue
-let s:magenta     = HexOrTermColor("#82263b", 5)   " Magenta | LightMagenta
+let s:magenta     = HexOrTermColor("#781c30", 5)   " Magenta | LightMagenta
 let s:comment    = HexOrTermColor("#5f666d", 7)    " White | LightGrey
 " let s:selection  = HexOrTermColor("#373a40", 8)    " White 
 let s:selection  = HexOrTermColor("#272a30", 8)    " White 
@@ -341,7 +341,7 @@ exe "hi! PreProc"         .s:fg_blue        .s:bg_none        .s:fmt_none
 
 exe "hi! Type"            .s:fg_aqua      .s:bg_none        .s:fmt_none
 "   StorageClass"
-exe "hi! Structure"       .s:fg_orange        .s:bg_none        .s:fmt_none
+exe "hi! Structure"       .s:fg_green        .s:bg_none        .s:fmt_none
 "   Typedef"
 
 exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
