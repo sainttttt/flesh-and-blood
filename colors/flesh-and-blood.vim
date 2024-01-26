@@ -266,9 +266,9 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 "   PmenuThumb"
 
 " exe "hi! IncSearch" .s:fg_yellow .s:bg_magenta. s:fmt_none
-exe "hi! CurSearch" .s:fg_line .s:bg_blue. s:fmt_none
+exe "hi! LocalSearch" .s:fg_line .s:bg_blue. s:fmt_none
 
-exe "hi! LocalSearch" .s:fg_yellow .s:bg_magenta. s:fmt_none
+exe "hi! CurSearch" .s:fg_yellow .s:bg_magenta. s:fmt_none
 
 exe "hi! FloatFilename" .s:fg_magenta .s:bg_float_bg. s:fmt_none
 exe "hi! FloatFilenameChange" .s:fg_yellow .s:bg_magenta. s:fmt_none
