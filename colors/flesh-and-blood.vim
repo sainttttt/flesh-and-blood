@@ -238,6 +238,7 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 "   CursorIM"
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"    .s:fg_none        .s:bg_cursorline       .s:fmt_none
+exe "hi! TreesitterContext"    .s:fg_none        .s:bg_cursorline       .s:fmt_none
 exe "hi! Directory"     .s:fg_blue        .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
