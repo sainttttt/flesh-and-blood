@@ -69,19 +69,20 @@ endif
 
 
 let s:line       = HexOrTermColor("#181818", 0)    " Black
-let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon  
-" let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon  
+let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon
+" let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon
 let s:orange     = HexOrTermColor("#dd9767", 3)    " Yellow | DarkYellow
 let s:blue       = HexOrTermColor("#7a88a0", 4)   " Bright Blue | LightBlue
 let s:magenta     = HexOrTermColor("#781c30", 5)   " Magenta | LightMagenta
 let s:comment    = HexOrTermColor("#5f666d", 7)    " White | LightGrey
-" let s:selection  = HexOrTermColor("#373a40", 8)    " White 
-let s:selection  = HexOrTermColor("#272a30", 8)    " White 
+" let s:selection  = HexOrTermColor("#373a40", 8)    " White
+let s:selection  = HexOrTermColor("#272a30", 8)    " White
+" let s:selection  = HexOrTermColor("#2828", 8)    " White
 
-let s:float_bg  = HexOrTermColor("#1b1b1b", 8)    " White 
+let s:float_bg  = HexOrTermColor("#1b1b1b", 8)    " White
 let s:red        = HexOrTermColor("#aa314d", 9)    " Bright Red | LightRed
 
-" let s:selection  = HexOrTermColor("#5f666d", 8)    " White 
+" let s:selection  = HexOrTermColor("#5f666d", 8)    " White
 
 " let s:red        = HexOrTermColor("#c85a80", 9)    " Bright Red | LightRed
 
@@ -96,7 +97,7 @@ let s:aqua       = HexOrTermColor("#963d52", 14)   " Cyan Bright | LightCyan
 let s:foreground = HexOrTermColor("#9b9b9b", 15)   " White
 
 
-" old 5 - 
+" old 5 -
 
 
 "}}}
@@ -239,6 +240,8 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"    .s:fg_none        .s:bg_cursorline       .s:fmt_none
 exe "hi! TreesitterContext"    .s:fg_none        .s:bg_cursorline       .s:fmt_none
+exe "hi! Context"    .s:fg_magenta        .s:bg_cursorline       .s:fmt_none
+
 exe "hi! Directory"     .s:fg_blue        .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
@@ -267,9 +270,16 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 "   PmenuThumb"
 
 " exe "hi! IncSearch" .s:fg_yellow .s:bg_magenta. s:fmt_none
-exe "hi! LocalSearch" .s:fg_line .s:bg_blue. s:fmt_none
+" exe "hi! CurSearch" .s:fg_line .s:bg_blue. s:fmt_none
 
-exe "hi! CurSearch" .s:fg_yellow .s:bg_magenta. s:fmt_none
+" exe "hi! LocalSearch" .s:fg_yellow .s:bg_magenta. s:fmt_none
+
+hi! LocalSearch guibg=#470000
+" hi! CurSearch guibg=#470000
+
+hi! CurSearch guibg=#152238
+" hi! LocalSearch guibg=#152238
+
 
 exe "hi! FloatFilename" .s:fg_magenta .s:bg_float_bg. s:fmt_none
 exe "hi! FloatFilenameChange" .s:fg_yellow .s:bg_magenta. s:fmt_none
@@ -277,7 +287,7 @@ exe "hi! FloatFilenameChange" .s:fg_yellow .s:bg_magenta. s:fmt_none
 exe "hi! Question"      .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! Search"        .s:fg_background  .s:bg_yellow      .s:fmt_none
 exe "hi! SpecialKey"    .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! SpellCap"      .s:fg_blue        .s:bg_darkblue    .s:fmt_undr
+exe "hi! SpellCap"      .s:fg_magenta        .s:bg_none    .s:fmt_none
 exe "hi! SpellLocal"    .s:fg_aqua        .s:bg_darkcyan    .s:fmt_undr
 exe "hi! SpellBad"      .s:fg_red         .s:bg_darkred     .s:fmt_undr
 exe "hi! SpellRare"     .s:fg_purple      .s:bg_darkpurple  .s:fmt_undr
@@ -288,6 +298,11 @@ exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "   TabLineSel"
 exe "hi! Title"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
+hi Visual guibg=#152238
+
+hi! IlluminatedWordText        guibg=#1c2e4a
+hi! IlluminatedWordRead        guibg=#1c2e4a
+hi! IlluminatedWordWrite       guibg=#1c2e4a
 "   VisualNos"
 exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
 " hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
@@ -385,6 +400,8 @@ exe "hi! DiagnosticWarn"        .s:fg_aqua      .s:bg_none        .s:fmt_none
 exe "hi! DiagnosticInfo"        .s:fg_blue      .s:bg_none        .s:fmt_none
 exe "hi! DiagnosticHint"        .s:fg_blue      .s:bg_none        .s:fmt_none
 exe "hi! HighlightUndo"        .s:fg_none      .s:bg_selection        .s:fmt_none
+
+hi LucyLine ctermfg=20  ctermbg=159 guifg=NONE guibg=#470000
 
 
 "}}}
