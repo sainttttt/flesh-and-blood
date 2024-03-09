@@ -303,6 +303,8 @@ hi Visual guibg=#152238
 hi! IlluminatedWordText        guibg=#1c2e4a
 hi! IlluminatedWordRead        guibg=#1c2e4a
 hi! IlluminatedWordWrite       guibg=#1c2e4a
+
+hi SearchxMarker ctermfg=20  ctermbg=159 guifg=NONE guibg=#1c2e4a
 "   VisualNos"
 exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
 " hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
@@ -401,7 +403,7 @@ exe "hi! DiagnosticInfo"        .s:fg_blue      .s:bg_none        .s:fmt_none
 exe "hi! DiagnosticHint"        .s:fg_blue      .s:bg_none        .s:fmt_none
 exe "hi! HighlightUndo"        .s:fg_none      .s:bg_selection        .s:fmt_none
 
-hi LucyLine ctermfg=20  ctermbg=159 guifg=NONE guibg=#470000
+hi LucyLine ctermfg=20  ctermbg=159 guifg=NONE guibg=#421010
 
 
 "}}}
