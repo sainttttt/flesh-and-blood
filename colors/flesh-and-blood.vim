@@ -94,7 +94,7 @@ let s:purple     = HexOrTermColor("#af6a87", 13)   " Magenta Bright | LightMagen
 let s:aqua       = HexOrTermColor("#963d52", 14)   " Cyan Bright | LightCyan
 
 
-let s:foreground = HexOrTermColor("#9b9b9b", 15)   " White
+let s:foreground = HexOrTermColor("#999999", 15)   " White
 
 
 " old 5 -
@@ -274,11 +274,14 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 
 " exe "hi! LocalSearch" .s:fg_yellow .s:bg_magenta. s:fmt_none
 
-hi! LocalSearch guibg=#470000
-" hi! CurSearch guibg=#470000
+" hi! LocalSearch guibg=#470000
+hi! CurSearch guibg=#470000
 
-hi! CurSearch guibg=#152238
-" hi! LocalSearch guibg=#152238
+" hi! CurSearch guibg=#152238
+hi! LocalSearch guibg=#142b58
+
+hi! ObsidianBullet guifg=#96233d
+hi! ObsidianUI guifg=#96233d
 
 
 exe "hi! FloatFilename" .s:fg_magenta .s:bg_float_bg. s:fmt_none
@@ -298,11 +301,13 @@ exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "   TabLineSel"
 exe "hi! Title"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
-hi Visual guibg=#152238
 
-hi! IlluminatedWordText        guibg=#1c2e4a
-hi! IlluminatedWordRead        guibg=#1c2e4a
-hi! IlluminatedWordWrite       guibg=#1c2e4a
+hi Visual guibg=#1c2d4a
+
+
+hi! IlluminatedWordText        guibg=#1c2d4d
+hi! IlluminatedWordRead        guibg=#1c2d4d
+hi! IlluminatedWordWrite       guibg=#1c2d4d
 
 hi SearchxMarker ctermfg=20  ctermbg=159 guifg=NONE guibg=#1c2e4a
 "   VisualNos"
@@ -403,7 +408,9 @@ exe "hi! DiagnosticInfo"        .s:fg_blue      .s:bg_none        .s:fmt_none
 exe "hi! DiagnosticHint"        .s:fg_blue      .s:bg_none        .s:fmt_none
 exe "hi! HighlightUndo"        .s:fg_none      .s:bg_selection        .s:fmt_none
 
-hi LucyLine ctermfg=20  ctermbg=159 guifg=NONE guibg=#421010
+" hi LucyLine ctermfg=20  ctermbg=159 guifg=NONE guibg=#421010
+hi LucyLine guibg=#22000d
+
 
 
 "}}}
@@ -451,3 +458,6 @@ hi! link diffAdded Special
 
 hi clear Search
 hi clear IncSearch
+
+hi @variable guifg=#999999
+hi WinSeparator guifg=#373a40
