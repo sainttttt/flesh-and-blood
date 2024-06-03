@@ -275,7 +275,7 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 " exe "hi! LocalSearch" .s:fg_yellow .s:bg_magenta. s:fmt_none
 
 " hi! LocalSearch guibg=#470000
-hi! CurSearch guibg=#470000
+hi! CurSearch guibg=#470000 guifg=#999999
 
 " hi! CurSearch guibg=#152238
 hi! LocalSearch guibg=#142b58
@@ -339,6 +339,7 @@ exe "hi! TabLineSel"      .s:fg_magenta     .s:bg_background        .s:fmt_none
 
 exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_darkred       .s:bg_none        .s:fmt_none
+exe "hi! QuickFixLine"          .s:fg_darkred       .s:bg_none        .s:fmt_none
 exe "hi! Number"          .s:fg_purple       .s:bg_none        .s:fmt_none
 "   Character"
 "   Number"
