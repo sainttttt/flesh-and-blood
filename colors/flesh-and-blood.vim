@@ -69,29 +69,29 @@ endif
 
 
 let s:line       = HexOrTermColor("#181818", 0)    " Black
-let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon
+let s:darkred    = HexOrTermColor("#76233d", 1)    " Red | Maroon
 " let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon
 let s:orange     = HexOrTermColor("#dd9767", 3)    " Yellow | DarkYellow
 let s:blue       = HexOrTermColor("#7a88a0", 4)   " Bright Blue | LightBlue
-let s:magenta     = HexOrTermColor("#781c30", 5)   " Magenta | LightMagenta
+let s:magenta     = HexOrTermColor("#811c30", 5)   " Magenta | LightMagenta
 let s:comment    = HexOrTermColor("#5f666d", 7)    " White | LightGrey
 " let s:selection  = HexOrTermColor("#373a40", 8)    " White
 let s:selection  = HexOrTermColor("#272a30", 8)    " White
 " let s:selection  = HexOrTermColor("#2828", 8)    " White
 
 let s:float_bg  = HexOrTermColor("#1b1b1b", 8)    " White
-let s:red        = HexOrTermColor("#aa314d", 9)    " Bright Red | LightRed
+let s:red        = HexOrTermColor("#88314d", 9)    " Bright Red | LightRed
 
 " let s:selection  = HexOrTermColor("#5f666d", 8)    " White
 
 " let s:red        = HexOrTermColor("#c85a80", 9)    " Bright Red | LightRed
 
-let s:green      = HexOrTermColor("#91213b", 10)   " LightGreen
+let s:green      = HexOrTermColor("#81213b", 10)   " LightGreen
 let s:yellow     = HexOrTermColor("#967e7f", 11)   " LightYellow
 let s:cursorline  = HexOrTermColor("#1f1f1f", 12)    " Cyan
 let s:purple     = HexOrTermColor("#af6a87", 13)   " Magenta Bright | LightMagenta
 
-let s:aqua       = HexOrTermColor("#963d52", 14)   " Cyan Bright | LightCyan
+let s:aqua       = HexOrTermColor("#933d52", 14)   " Cyan Bright | LightCyan
 
 
 let s:foreground = HexOrTermColor("#999999", 15)   " White
@@ -338,7 +338,7 @@ exe "hi! TabLineSel"      .s:fg_magenta     .s:bg_background        .s:fmt_none
 
 
 exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
-exe "hi! String"          .s:fg_darkred       .s:bg_none        .s:fmt_none
+exe "hi! String"          .s:fg_magenta       .s:bg_none        .s:fmt_none
 exe "hi! QuickFixLine"          .s:fg_darkred       .s:bg_none        .s:fmt_none
 exe "hi! Number"          .s:fg_purple       .s:bg_none        .s:fmt_none
 "   Character"
