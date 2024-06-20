@@ -36,6 +36,28 @@ endfunction
 " GUI And Cterm Palettes:"{{{
 " ----------------------------------------------------------------------------
 
+" Function to convert hex to RGB
+function! HexToRgb(hex)
+    let r = str2nr(a:hex[1:2], 16)
+    let g = str2nr(a:hex[3:4], 16)
+    let b = str2nr(a:hex[5:6], 16)
+    return [r, g, b]
+endfunction
+
+" Function to convert RGB to hex
+function! RgbToHex(rgb)
+    let hex = printf("#%02x%02x%02x", a:rgb[0], a:rgb[1], a:rgb[2])
+    return hex
+endfunction
+
+" Function to lighten or darken a hex color
+" percentage > 0 to lighten, < 0 to darken
+function! AdjustHexColor(hex, percentage)
+    let rgb = HexToRgb(a:hex)
+    let factor = 1 + a:percentage / 100.0
+    let new_rgb = map(rgb, 'max(0, min(255, v:val * factor))')
+    return RgbToHex(new_rgb)
+endfunction
 
 
 if s:gui
@@ -73,7 +95,7 @@ let s:darkred    = HexOrTermColor("#76233d", 1)    " Red | Maroon
 " let s:darkred    = HexOrTermColor("#96233d", 1)    " Red | Maroon
 let s:orange     = HexOrTermColor("#dd9767", 3)    " Yellow | DarkYellow
 let s:blue       = HexOrTermColor("#7a88a0", 4)   " Bright Blue | LightBlue
-let s:magenta     = HexOrTermColor("#811c30", 5)   " Magenta | LightMagenta
+let s:magenta     = HexOrTermColor("#811d31", 5)   " Magenta | LightMagenta
 let s:comment    = HexOrTermColor("#5f666d", 7)    " White | LightGrey
 " let s:selection  = HexOrTermColor("#373a40", 8)    " White
 let s:selection  = HexOrTermColor("#272a30", 8)    " White
@@ -462,3 +484,11 @@ hi clear IncSearch
 
 hi @variable guifg=#999999
 hi WinSeparator guifg=#373a40
+
+hi HighlightUndo guibg=#33000d
+hi! link HighlightRedo HighlightUndo
+hi CodeBlock guibg=#202020 guifg=#808080
+hi HeadLine guifg=#7a88a0 guibg=#1c1c1c
+
+hi! ModifiedBuffer guibg=#56031d guifg=#888888
+hi! link FloatFilenameChange ModifiedBuffer
