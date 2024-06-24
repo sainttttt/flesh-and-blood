@@ -324,7 +324,7 @@ exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 exe "hi! Title"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
 
-hi Visual guibg=#1c2d4a
+hi Visual guibg=#152238
 
 
 hi! IlluminatedWordText        guibg=#1c2d4d
@@ -485,7 +485,7 @@ hi clear IncSearch
 hi @variable guifg=#999999
 hi WinSeparator guifg=#373a40
 
-hi HighlightUndo guibg=#33000d
+hi HighlightUndo guibg=#102030
 hi! link HighlightRedo HighlightUndo
 hi CodeBlock guibg=#202020 guifg=#808080
 hi HeadLine guifg=#7a88a0 guibg=#1c1c1c
