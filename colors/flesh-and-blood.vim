@@ -62,7 +62,7 @@ endfunction
 
 if s:gui
   let s:vmode      = "gui"
-  let s:background = "#181818"
+  let s:background = "#161616"
   let s:window     = "#303030"
   let s:darkcolumn = "#1c1c1c"
   let s:addbg      = "#5F875F"
