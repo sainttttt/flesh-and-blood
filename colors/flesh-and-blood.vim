@@ -4,18 +4,12 @@ if !has("gui_running") && &t_Co < 256
   finish
 endif
 
-if !exists("g:hybrid_use_Xresources")
-  let g:hybrid_use_Xresources = 0
-endif
-
 set background=dark
 hi clear
 
 if exists("syntax_on")
   syntax reset
 endif
-
-let colors_name = "hybrid"
 
 let s:gui = 1
 
@@ -50,6 +44,7 @@ function! RgbToHex(rgb)
     return hex
 endfunction
 
+
 " Function to lighten or darken a hex color
 " percentage > 0 to lighten, < 0 to darken
 function! AdjustHexColor(hex, percentage)
@@ -58,7 +53,6 @@ function! AdjustHexColor(hex, percentage)
     let new_rgb = map(rgb, 'max(0, min(255, v:val * factor))')
     return RgbToHex(new_rgb)
 endfunction
-
 
 if s:gui
   let s:vmode      = "gui"
@@ -252,6 +246,7 @@ else
   let s:sp_darkpurple = ""
 endif
 
+
 "}}}
 " Vim Highlighting: (see :help highlight-groups)"{{{
 " ----------------------------------------------------------------------------
@@ -260,8 +255,8 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 "   Cursor"
 "   CursorIM"
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! CursorLine"    .s:fg_none        .s:bg_cursorline       .s:fmt_none
-exe "hi! TreesitterContext"    .s:fg_none        .s:bg_cursorline       .s:fmt_none
+exe "hi! CursorLineMain"    .s:fg_none        .s:bg_cursorline       .s:fmt_none
+exe "hi! link CursorLine CursorLineMain"
 exe "hi! Context"    .s:fg_magenta        .s:bg_cursorline       .s:fmt_none
 
 exe "hi! Directory"     .s:fg_blue        .s:bg_none        .s:fmt_none
@@ -271,7 +266,7 @@ exe "hi! DiffDelete"    .s:fg_background  .s:bg_red         .s:fmt_none
 exe "hi! DiffText"      .s:fg_background  .s:bg_blue        .s:fmt_none
 exe "hi! ErrorMsg"      .s:fg_background  .s:bg_red         .s:fmt_stnd
 exe "hi! VertSplit"     .s:fg_window      .s:bg_none        .s:fmt_none
-exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
+" exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
 exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 "   Incsearch"
@@ -299,6 +294,7 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 " hi! LocalSearch guibg=#470000
 hi! CurSearch guibg=#470000 guifg=#999999
 
+
 " hi! CurSearch guibg=#152238
 hi! LocalSearch guibg=#142b58
 
@@ -325,6 +321,7 @@ exe "hi! Title"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
 
 hi Visual guibg=#152238
+hi MarkSet guibg=#172440
 
 
 hi! IlluminatedWordText        guibg=#1c2d4d
@@ -340,8 +337,6 @@ exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! NvimTreeNormalFloat"        .s:fg_yellow  .s:bg_none        .s:fmt_none
 exe "hi! NvimTreeFolderIcon"        .s:fg_darkred  .s:bg_none        .s:fmt_none
 
-" Use Xresources for background colour
-" if has('gui_running') || g:hybrid_use_Xresources != 1
 if s:gui
   exe "hi! Normal"        .s:fg_foreground  .s:bg_background  .s:fmt_none
   exe "hi! NormalFloat"        .s:fg_foreground  .s:bg_background  .s:fmt_none
@@ -432,7 +427,13 @@ exe "hi! DiagnosticHint"        .s:fg_blue      .s:bg_none        .s:fmt_none
 exe "hi! HighlightUndo"        .s:fg_none      .s:bg_selection        .s:fmt_none
 
 " hi LucyLine ctermfg=20  ctermbg=159 guifg=NONE guibg=#421010
-hi LucyLine guibg=#22000d
+hi LucyLine guibg=#18000d
+
+hi! YankText guibg=#22000d
+" hi! YankText guibg=#121628
+
+hi! link YankyYanked YankText
+hi! link YankyPut YankText
 
 
 
@@ -490,5 +491,13 @@ hi! link HighlightRedo HighlightUndo
 hi CodeBlock guibg=#202020 guifg=#808080
 hi HeadLine guifg=#7a88a0 guibg=#1c1c1c
 
+hi CursorLineEdit guibg=#181010
+
 hi! ModifiedBuffer guibg=#56031d guifg=#888888
+hi UfoFoldedBg guibg=#121212
+hi Folded guibg=#161212
+hi UfoCursorFoldedLine guibg=#121212
 hi! link FloatFilenameChange ModifiedBuffer
+
+hi! TreesitterContext  guibg=#101013
+highlight Conceal ctermbg=237 guibg=NONE guifg=DarkGrey term=NONE
