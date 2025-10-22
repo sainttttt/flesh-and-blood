@@ -90,7 +90,7 @@ let s:darkred    = HexOrTermColor("#76233d", 1)    " Red | Maroon
 let s:orange     = HexOrTermColor("#dd9767", 3)    " Yellow | DarkYellow
 let s:blue       = HexOrTermColor("#7a88a0", 4)   " Bright Blue | LightBlue
 let s:magenta     = HexOrTermColor("#811d31", 5)   " Magenta | LightMagenta
-let s:comment    = HexOrTermColor("#5f666d", 7)    " White | LightGrey
+let s:comment    = HexOrTermColor("#414c66", 7)    " White | LightGrey
 " let s:selection  = HexOrTermColor("#373a40", 8)    " White
 let s:selection  = HexOrTermColor("#272a30", 8)    " White
 " let s:selection  = HexOrTermColor("#2828", 8)    " White
@@ -499,5 +499,15 @@ hi Folded guibg=#161212
 hi UfoCursorFoldedLine guibg=#121212
 hi! link FloatFilenameChange ModifiedBuffer
 
+" render markdown colors { 'MeanderingProgrammer/render-markdown.nvim',
+hi! RenderMarkdownH1Bg  guibg=#351015 guifg=#888888
+
+
+
+hi! link WinbarNC Normal
+hi! link Winbar Normal
+
 hi! TreesitterContext  guibg=#101013
 highlight Conceal ctermbg=237 guibg=NONE guifg=DarkGrey term=NONE
+
+hi! @disableComment guifg=#333333
